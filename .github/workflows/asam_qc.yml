@@ -89,12 +89,8 @@ jobs:
       - name: Find changed files
         id: changed-files
         run: |
-          CHANGED_FILES=$(git diff --name-status $CI_MERGE_REQUEST_DIFF_BASE_SHA -- '*.xodr' '*.xosc' | awk '$1 != "D" {print $2}')
-          {
-            echo 'changed_files<<EOF'
-            echo "$CHANGED_FILES"
-            echo 'EOF'
-          } >> $GITHUB_OUTPUT
+          CHANGED_FILES=$(git diff --name-status $CI_MERGE_REQUEST_DIFF_BASE_SHA -- '*.xodr' '*.xosc' | awk '$1 != "D" {print $2}' | tr '\n' ' ')
+          echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
       - name: Run QC tests
         if: steps.changed-files.outputs.changed_files != ''
         run: |
@@ -140,13 +136,8 @@ jobs:
       - name: Find changed files
         id: changed-files
         run: |
-          CHANGED_FILES=$(git diff --name-status $CI_MERGE_REQUEST_DIFF_BASE_SHA -- '*.xoma' '*.xomm' '*.xomp' '*.xompt' | awk '$1 != "D" {print $2}')
-          {
-            echo 'changed_files<<EOF'
-            echo "$CHANGED_FILES"
-            echo 'EOF'
-          } >> $GITHUB_OUTPUT
-
+          CHANGED_FILES=$(git diff --name-status $CI_MERGE_REQUEST_DIFF_BASE_SHA -- '*.xoma' '*.xomm' '*.xomp' '*.xompt' | awk '$1 != "D" {print $2}' | tr '\n' ' ')
+          echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
       - name: Run QC tests
         if: steps.changed-files.outputs.changed_files != ''
         run: |
