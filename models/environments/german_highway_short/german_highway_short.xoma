@@ -1,0 +1,36 @@
+{
+    "metadata": {
+        "name": "german_highway_short",
+        "description": "This is a demo environment of a German highway section.",
+        "uuid": "333df43e-4b40-480e-8aed-28a0f41d550d",
+        "assetVersion": "1.0.0",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2024 Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["blagovest.bobchev@persival.de","clemens.linnhoff@persival.de"],
+        "modelCreationTool": "Blender",
+        "creationDate": "20251022T130000Z",
+        "modelingMethod": "Modeled freely without real world counterpart",
+        "validationDescription": "Since this is a fictional environment, the geometry was not validated. Standard compliance was verified manually.",
+        "assetType": "object",
+        "objectClass": "environment",
+        "animated": false,
+        "pbrMaterialWorkflow": "metallic",
+        "triangleCount": 5046589,
+        "meshCount": 157,
+        "textureResolutions": ["1K"],
+        "normalMapFormat": "OpenGL",
+        "boundingBox": {
+            "x": [-1173.921, 587.236],
+            "y": [-566.987, 393.938],
+            "z": [-2.572, 75.021]
+        }
+    },
+    "materialMappingUri": "../../persival_mapping_table.xomm",
+    "materialTextureAssignment": [
+        [
+            "Bricks_Textured",
+            "bricks053_2k_xom.png"
+        ]
+    ]
+}
