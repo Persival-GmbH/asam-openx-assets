@@ -39,11 +39,6 @@ jobs:
               -e USER_ID=$(id -u) \
               -e GROUP_ID=$(id -g) \
               --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
-            ls -l
-            cd qc-result-xodr
-            ls -l
-            cd german_highway_short.xodr
-            ls -l
             python3 ./.github/workflows/handle_report.py ./qc-result-$FILE/Result.xqar
           done
       - name: Publish test results
