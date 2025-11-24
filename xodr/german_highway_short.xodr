@@ -16,11 +16,11 @@
         <lanes>
             <laneSection s="0">
                 <left>
-                    <lane id="7" type="shoulder" level="false">
+                    <lane id="7" level="false">
                         <link>
                             <successor id="7"/>
                         </link>
-                        <width a="-1.5" b="0.0" c="0.0" d="0.0" sOffset="0"/>
+                        <width a="1.5" b="0.0" c="0.0" d="0.0" sOffset="0"/>
                         <roadMark sOffset="0" type="none" weight="standard" color="standard" height="0.02"/>
                     </lane>
                     <lane id="6" type="stop" level="false">
