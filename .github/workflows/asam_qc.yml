@@ -34,7 +34,7 @@ jobs:
             echo "Running tests for $FILE"
             docker run \
               -e INPUT_FILENAME=$FILE \
-              -v $(pwd)/3d-assets:/input_directory \
+              -v $(pwd):/input_directory \
               -v $(pwd):/out \
               -e USER_ID=$(id -u) \
               -e GROUP_ID=$(id -g) \
