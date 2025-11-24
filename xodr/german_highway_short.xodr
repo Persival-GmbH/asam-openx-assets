@@ -2,7 +2,7 @@
     <header name="blender_dsc" revMajor="1" revMinor="8" date="2024-02-28 08:11:14.002367" north="0.0" south="0.0" east="0.0" west="0.0"/>
     <road rule="RHT" id="37" junction="-1" length="924.0198191130992">
         <link>
-            <successor elementType="road" elementId="49" contactPoint="start"/>
+            <successor elementType="road" elementId="46" contactPoint="start"/>
         </link>
         <planView>
             <geometry s="0" x="-921.9381713867188" y="-56.58137130737305" hdg="1.4320154129610074e-05" length="924.0198191130992">
@@ -20,7 +20,7 @@
                         <link>
                             <successor id="7"/>
                         </link>
-                        <width a="1.5" b="0.0" c="0.0" d="0.0" sOffset="0"/>
+                        <width a="-1.5" b="0.0" c="0.0" d="0.0" sOffset="0"/>
                         <roadMark sOffset="0" type="none" weight="standard" color="standard" height="0.02"/>
                     </lane>
                     <lane id="6" type="stop" level="false">
