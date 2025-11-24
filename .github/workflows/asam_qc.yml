@@ -73,10 +73,7 @@ jobs:
               -e USER_ID=$(id -u) \
               -e GROUP_ID=$(id -g) \
               --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
-            ls -l
-            cd qc-build/bin
-            ls -l
-            .GithubCIReport qc-result-$FILE/Result.xqar
+            ./qc-build/bin/GithubCIReport qc-result-$FILE/Result.xqar
           done
           touch junit_report.xml
 
