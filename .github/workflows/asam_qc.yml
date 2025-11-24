@@ -64,7 +64,7 @@ jobs:
         run: |
           python3 -m venv .venv
           source .venv/bin/activate
-          pip install ./qc-openmaterial-3d
+          pip install .
 
 
   asam_qc_opendrive_openscenarioxml:
