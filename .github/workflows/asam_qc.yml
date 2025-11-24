@@ -1,0 +1,56 @@
+
+name: ASAM QC OpenDRIVE/OpenSCENARIO XML
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  asam_qc_opendrive_openscenarioxml:
+    runs-on: ubuntu-latest
+    container: cimg/python:3.11
+    services:
+      docker:
+        image: docker:27.4-dind
+        options: --privileged  # Needed for Docker-in-Docker
+    env:
+      CI_COMMIT_REF_NAME: ${{ github.head_ref }}
+      CI_MERGE_REQUEST_DIFF_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for diff
+      - name: Wait for Docker daemon
+        run: |
+          echo "Waiting for docker daemon to be fully started"
+          until docker info; do sleep 1; done
+      - name: Find changed files
+        id: changed-files
+        run: |
+          CHANGED_FILES=$(git diff --name-status $CI_MERGE_REQUEST_DIFF_BASE_SHA -- '*.xodr' '*.xosc' | awk '$1 != "D" {print $2}')
+          echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+      - name: Run QC tests
+        if: steps.changed-files.outputs.changed_files != ''
+        run: |
+          for FILE in ${{ steps.changed-files.outputs.changed_files }}; do
+            echo "Running tests for $FILE"
+            docker run \
+              -e INPUT_FILENAME=$FILE \
+              -v $(pwd)/3d-assets:/input_directory \
+              -v $(pwd):/out \
+              -e USER_ID=$(id -u) \
+              -e GROUP_ID=$(id -g) \
+              --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
+            python3 ./.github/workflows/handle_report.py qc-result-$FILE/Result.xqar
+          done
+      - name: Create JUnit report
+        run: |
+          touch junit_report.xml
+          test -n "${{ steps.changed-files.outputs.changed_files }}" && python3 ./.github/workflows/exit_on_failure.py
+      - name: Upload JUnit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-report
+          path: junit_report.xml
