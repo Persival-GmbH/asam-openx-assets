@@ -57,7 +57,7 @@ jobs:
           path: qc-build
           key: ${{ runner.os }}-qc-build
       - name: Install dependencies
-        run: sudo apt install -y libxerces-c-dev
+        run: sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
       - name: Find changed files
         id: changed-files
         run: |
