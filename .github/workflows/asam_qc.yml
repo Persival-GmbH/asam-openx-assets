@@ -29,7 +29,6 @@ jobs:
       - name: Run QC tests
         if: steps.changed-files.outputs.changed_files != ''
         run: |
-          touch junit_report.xml
           for FILE in ${{ steps.changed-files.outputs.changed_files }}; do
             echo "Running tests for $FILE"
             docker run \
@@ -41,6 +40,7 @@ jobs:
               --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
             python3 ./.github/workflows/handle_report.py qc-result-$FILE/Result.xqar
           done
+          touch junit_report.xml
 
       - name: Upload Report for Debugging
         uses: actions/upload-artifact@v4
