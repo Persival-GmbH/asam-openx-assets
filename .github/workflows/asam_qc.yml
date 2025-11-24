@@ -77,16 +77,3 @@ jobs:
               --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
             ./qc-build/bin/GithubCIReport qc-result-$FILE/Result.xqar
           done
-          touch junit_report.xml
-
-      - name: Upload Report for Debugging
-        uses: actions/upload-artifact@v4
-        with:
-          name: Result.xqar
-          path: qc-result-xodr/german_highway_short.xodr/Result.xqar
-
-      - name: Publish test results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          files: junit_report.xml
