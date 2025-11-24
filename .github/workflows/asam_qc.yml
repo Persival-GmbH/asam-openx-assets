@@ -26,11 +26,6 @@ jobs:
         if: steps.cache-qc-framework.outputs.cache-hit != 'true'
         run: git clone https://github.com/asam-ev/qc-framework.git
 
-      - name: Copy Commit ID to Cache
-        if: steps.cache-qc-framework.outputs.cache-hit != 'true'
-        working-directory: qc-framework
-        run: git rev-parse --short HEAD > commit-id.txt
-
       - name: Build QC Framework
         if: steps.cache-qc-framework.outputs.cache-hit != 'true'
         working-directory: qc-framework
@@ -43,12 +38,6 @@ jobs:
             -DQt5XmlPatterns_DIR="/usr/lib/x86_64-linux-gnu/cmake/Qt5XmlPatterns/"
           cmake --build ./build --target install --config Release -j4
           cmake --install ./build
-
-      - name: Commit ID
-        working-directory: qc-framework
-        run: |
-          echo "Commit ID: "
-          echo $(cat commit-id.txt)
 
   asam_qc_opendrive_openscenarioxml:
     runs-on: ubuntu-latest
