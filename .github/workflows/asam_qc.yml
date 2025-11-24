@@ -39,7 +39,7 @@ jobs:
               -e USER_ID=$(id -u) \
               -e GROUP_ID=$(id -g) \
               --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
-            python3 ./.github/workflows/handle_report.py qc-result-$FILE/Result.xqar
+            python3 ./.github/workflows/handle_report.py ./out/qc-result-$FILE/Result.xqar
           done
       - name: Publish test results
         uses: EnricoMi/publish-unit-test-result-action@v2
