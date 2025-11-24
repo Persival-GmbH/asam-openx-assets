@@ -69,6 +69,7 @@
                 <!-- Scale modes: None, BBToModel, ModelToBB -->
                 <Property name="scaleMode" value="ModelToBB"/>
             </Properties>
+		</Vehicle>
 		<Vehicle name="gmc_hummer_2021_pickup" vehicleCategory="truck" mass="4500" model3d="../models/vehicles/gmc_hummer_2021_pickup/gmc_hummer_2021_pickup.xoma">
 			<BoundingBox>
 				<Center x="1.5793" y="0.000" z="0.970"/>

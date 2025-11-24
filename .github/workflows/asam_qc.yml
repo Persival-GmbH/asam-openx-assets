@@ -154,6 +154,6 @@ jobs:
           for FILE in ${{ steps.changed-files.outputs.changed_files }}; do
             echo "Running tests for $FILE"
             python3 ./.github/workflows/generate_config.py ./.github/workflows/qc_openmaterial3d_config.xml $FILE
-            python3 ./qc-openmaterial-3d/qc_openmaterial3d/main.py --config_path ./github/workflows/qc_openmaterial3d_config.xml
+            python3 ./qc-openmaterial-3d/qc_openmaterial3d/main.py --config_path ./.github/workflows/qc_openmaterial3d_config.xml
             ./qc-build/bin/GithubCIReport xom_bundle_report.xqar
           done
