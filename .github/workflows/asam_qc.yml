@@ -7,6 +7,49 @@ on:
       - '**'
 
 jobs:
+  build_qc_framework:
+    name: Build ASAM QC Framework
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cache QC Framework
+        id: cache-qc-framework
+        uses: actions/cache@v4
+        with:
+          path: qc-build
+          key: ${{ runner.os }}-qc-build
+
+      - name: Install dependencies
+        run: sudo apt install -y g++ g++-10 make build-essential cmake libgtest-dev qtbase5-dev libqt5xmlpatterns5-dev libxerces-c-dev pkg-config python3-venv git
+
+      - name: Get QC Framework
+        if: steps.cache-qc-framework.outputs.cache-hit != 'true'
+        run: git clone https://github.com/asam-ev/qc-framework.git
+
+      - name: Copy Commit ID to Cache
+        if: steps.cache-qc-framework.outputs.cache-hit != 'true'
+        working-directory: qc-framework
+        run: git rev-parse --short HEAD > commit-id.txt
+
+      - name: Build QC Framework
+        if: steps.cache-qc-framework.outputs.cache-hit != 'true'
+        working-directory: qc-framework
+        run: |
+          mkdir build
+          cmake -G "Unix Makefiles" -B./build -S . \
+            -DCMAKE_INSTALL_PREFIX="../qc-build" \
+            -DENABLE_FUNCTIONAL_TESTS=ON  -DXERCES_ROOT="/usr" \
+            -DQt5_DIR="/usr/lib/x86_64-linux-gnu/cmake/Qt5/" \
+            -DQt5XmlPatterns_DIR="/usr/lib/x86_64-linux-gnu/cmake/Qt5XmlPatterns/"
+          cmake --build ./build --target install --config Release -j4
+          cmake --install ./build
+
+      - name: Commit ID
+        working-directory: qc-framework
+        run: |
+          echo "Commit ID: "
+          echo $(cat commit-id.txt)
+
   asam_qc_opendrive_openscenarioxml:
     runs-on: ubuntu-latest
     env:
@@ -17,10 +60,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Needed for diff
-      - name: Wait for Docker daemon
-        run: |
-          echo "Waiting for docker daemon to be fully started"
-          until docker info; do sleep 1; done
+      - name: Cache QC Framework
+        id: cache-qc-framework
+        uses: actions/cache@v4
+        with:
+          path: qc-build
+          key: ${{ runner.os }}-qc-build
       - name: Find changed files
         id: changed-files
         run: |
@@ -39,6 +84,7 @@ jobs:
               -e GROUP_ID=$(id -g) \
               --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
             python3 ./.github/workflows/handle_report.py qc-result-$FILE/Result.xqar
+            ./qc-build/bin/GithubCIReport qc-result-$FILE/Result.xqar
           done
           touch junit_report.xml
 
