@@ -39,8 +39,15 @@ jobs:
               -e USER_ID=$(id -u) \
               -e GROUP_ID=$(id -g) \
               --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
-            python3 ./.github/workflows/handle_report.py ./qc-result-$FILE/Result.xqar
+            python3 ./.github/workflows/handle_report.py qc-result-$FILE/Result.xqar
           done
+
+      - name: Upload Report for Debugging
+        uses: actions/upload-artifact@v4
+        with:
+          name: Result.xqar
+          path: qc-result-xodr/german_highway_short.xodr/Result.xqar
+
       - name: Publish test results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
