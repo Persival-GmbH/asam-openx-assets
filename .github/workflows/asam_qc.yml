@@ -9,11 +9,6 @@ on:
 jobs:
   asam_qc_opendrive_openscenarioxml:
     runs-on: ubuntu-latest
-    container: cimg/python:3.11
-    services:
-      docker:
-        image: docker:27.4-dind
-        options: --privileged  # Needed for Docker-in-Docker
     env:
       CI_COMMIT_REF_NAME: ${{ github.head_ref }}
       CI_MERGE_REQUEST_DIFF_BASE_SHA: ${{ github.event.pull_request.base.sha }}
