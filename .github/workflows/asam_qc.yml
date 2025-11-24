@@ -52,6 +52,7 @@ jobs:
 
   asam_qc_opendrive_openscenarioxml:
     runs-on: ubuntu-latest
+    needs: build_qc_framework
     env:
       CI_COMMIT_REF_NAME: ${{ github.head_ref }}
       CI_MERGE_REQUEST_DIFF_BASE_SHA: ${{ github.event.pull_request.base.sha }}
@@ -83,8 +84,10 @@ jobs:
               -e USER_ID=$(id -u) \
               -e GROUP_ID=$(id -g) \
               --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
-            python3 ./.github/workflows/handle_report.py qc-result-$FILE/Result.xqar
-            ./qc-build/bin/GithubCIReport qc-result-$FILE/Result.xqar
+            ls -l
+            cd qc-build/bin
+            ls -l
+            .GithubCIReport qc-result-$FILE/Result.xqar
           done
           touch junit_report.xml
 
