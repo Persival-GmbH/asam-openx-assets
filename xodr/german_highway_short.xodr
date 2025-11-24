@@ -16,7 +16,7 @@
         <lanes>
             <laneSection s="0">
                 <left>
-                    <lane id="7" level="false">
+                    <lane id="7" type="shoulder" level="false">
                         <link>
                             <successor id="7"/>
                         </link>
