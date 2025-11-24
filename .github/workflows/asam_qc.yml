@@ -1,5 +1,5 @@
 
-name: ASAM QC OpenDRIVE/OpenSCENARIO XML
+name: ASAM QC OpenDRIVE/OpenSCENARIO XML/OpenMATERIAL 3D
 
 on:
   pull_request:
@@ -90,7 +90,11 @@ jobs:
         id: changed-files
         run: |
           CHANGED_FILES=$(git diff --name-status $CI_MERGE_REQUEST_DIFF_BASE_SHA -- '*.xodr' '*.xosc' | awk '$1 != "D" {print $2}')
-          echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+          {
+            echo 'changed_files<<EOF'
+            echo "$CHANGED_FILES"
+            echo 'EOF'
+          } >> $GITHUB_OUTPUT
       - name: Run QC tests
         if: steps.changed-files.outputs.changed_files != ''
         run: |
@@ -137,14 +141,19 @@ jobs:
         id: changed-files
         run: |
           CHANGED_FILES=$(git diff --name-status $CI_MERGE_REQUEST_DIFF_BASE_SHA -- '*.xoma' '*.xomm' '*.xomp' '*.xompt' | awk '$1 != "D" {print $2}')
-          echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+          {
+            echo 'changed_files<<EOF'
+            echo "$CHANGED_FILES"
+            echo 'EOF'
+          } >> $GITHUB_OUTPUT
+
       - name: Run QC tests
         if: steps.changed-files.outputs.changed_files != ''
         run: |
           source qc-openmaterial-3d/.venv/bin/activate
           for FILE in ${{ steps.changed-files.outputs.changed_files }}; do
             echo "Running tests for $FILE"
-            python3 ./.github/workflows/generate_config.py ./.github/workflows/qc_openmaterial3d_config.xml $file
+            python3 ./.github/workflows/generate_config.py ./.github/workflows/qc_openmaterial3d_config.xml $FILE
             python3 ./qc-openmaterial-3d/qc_openmaterial3d/main.py --config_path ./github/workflows/qc_openmaterial3d_config.xml
             ./qc-build/bin/GithubCIReport xom_bundle_report.xqar
           done
