@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "name": "Mini Countryman",
+    "description": "A 3D model of Mini Countryman 2016, suitable for use in simulations and visualizations.",
+    "uuid": "aa536d40-2ebd-575e-9f3b-f7988afdbfb5",
+    "authors": [
+      "Clemens Linnhoff <clemens.linnhoff@persival.de>",
+      "Dogan Ulus <dogan.ulus@bogazici.edu.tr>"
+    ],
+    "license": "MPL-2.0 AND CC-BY-4.0",
+    "copyrights": [
+      "(C) 2025 Persival GmbH",
+      "(c) 2025 Dogan Ulus <dogan.ulus@bogazici.edu.tr>",
+      "(c) 2019 razor24 <https://sketchfab.com/razor24>, licensed under CC-BY-4.0"
+    ],
+    "openMaterial3dVersion": "1.0.0",
+    "assetVersion": "2.0.0",
+    "assetType": "object",
+    "objectClass": "vehicle",
+    "boundingBox": {
+      "x": [
+        -2.1538,
+        2.1538
+      ],
+      "y": [
+        -0.9877,
+        0.9877
+      ],
+      "z": [
+        0.0,
+        1.5874
+      ]
+    },
+    "vehicleClassData": {
+      "vehicleCategory": "car",
+      "axles": {
+        "frontAxle": {
+          "maxSteering": 0.65,
+          "wheelDiameter": 0.6829,
+          "trackWidth": 1.515,
+          "positionX": 1.3266,
+          "positionZ": 0.3415
+        },
+        "rearAxle": {
+          "maxSteering": 0.0,
+          "wheelDiameter": 0.6829,
+          "trackWidth": 1.515,
+          "positionX": -1.3492,
+          "positionZ": 0.3415
+        }
+      },
+      "performance": {
+        "maxSpeed": 55.0,
+        "maxAcceleration": 4.0,
+        "maxDeceleration": 8.0
+      },
+      "mass": 1500
+    },
+    "meshCount": 42,
+    "triangleCount": 32286,
+    "animated": false,
+    "textureResolutions": [
+      ""
+    ],
+    "pbrMaterialWorkflow": "metallic",
+    "normalMapFormat": "OpenGL",
+    "modelCreationTool": "Blender"
+  },
+  "materialMappingUri": "../../persival_mapping_table.xomm"
+}

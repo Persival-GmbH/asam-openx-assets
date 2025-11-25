@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "vegetation_plant_genericLeaf",
+        "description": "Green leaf of a generic plant",
+        "uuid": "1f7c86a6-b6cc-433a-884a-aaabb5c9a09c",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250213T104319Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

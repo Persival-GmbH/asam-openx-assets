@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "polymer_pp_black",
+        "description": "Generic black polypropylene plastic",
+        "uuid": "8add4bc6-73fb-4a9f-bbb8-c6705a745b8c",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250213T104111Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "polymer_retroreflective_red",
+        "description": "Red retro reflector.",
+        "uuid": "9a0bbdba-3aad-4e7a-87a6-5bd0cdaba827",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250109T150409Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/ideal_retroreflector_lidar_brdf.xompt"
+        ]
+    }
+}

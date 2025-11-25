@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "fabric_cotton_green",
+        "description": "Green cotton.",
+        "uuid": "bfc2d1a4-2cf4-43fb-8db3-4a90e5568316",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250604T000000Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_80_pc_lidar_brdf.xompt"
+        ]
+    }
+}

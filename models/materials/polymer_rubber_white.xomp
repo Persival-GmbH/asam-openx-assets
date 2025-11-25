@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "polymer_rubber_whit",
+        "description": "Generic white rubber.",
+        "uuid": "f202a0fa-7156-46a5-a79c-e239fd4061ac",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250406T000000Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_95_pc_lidar_brdf.xompt"
+        ]
+    }
+}

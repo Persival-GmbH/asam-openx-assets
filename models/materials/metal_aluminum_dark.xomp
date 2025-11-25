@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "name": "metal_aluminum_dark",
+        "description": "Generic dark aluminum.",
+        "uuid": "3f68d897-cba0-44a4-b3ec-aa60120abcd0",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250714T145822Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "electromagneticPropertiesUri": "./look-up_tables/metal_aluminum_emp.xompt",
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_20_pc_lidar_brdf.xompt"
+        ]
+    }
+}

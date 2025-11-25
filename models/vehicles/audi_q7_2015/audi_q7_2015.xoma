@@ -1,0 +1,71 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asam-ev/OpenMATERIAL-3D/refs/tags/v1.0.0/schemas/asset_schema.json",
+  "metadata": {
+    "name": "Audi Q7",
+    "description": "A 3D model of Audi Q7 2015, suitable for use in simulations and visualizations.",
+    "uuid": "1681423c-e9b8-5ecc-87ca-1a0dc8f34409",
+    "authors": [
+      "Clemens Linnhoff <clemens.linnhoff@persival.de>",
+      "Dogan Ulus <dogan.ulus@bogazici.edu.tr>"
+    ],
+    "license": "MPL-2.0 AND CC-BY-4.0",
+    "copyrights": [
+      "(C) 2025 Persival GmbH",
+      "(c) 2025 Dogan Ulus <dogan.ulus@bogazici.edu.tr>",
+      "(c) 2019 razor24 <https://sketchfab.com/razor24>, licensed under CC-BY-4.0"
+    ],
+    "openMaterial3dVersion": "1.0.0",
+    "assetVersion": "2.0.0",
+    "assetType": "object",
+    "objectClass": "vehicle",
+    "boundingBox": {
+      "x": [
+        -2.5192,
+        2.5192
+      ],
+      "y": [
+        -1.1656,
+        1.1656
+      ],
+      "z": [
+        0.0,
+        1.7475
+      ]
+    },
+    "vehicleClassData": {
+      "vehicleCategory": "car",
+      "axles": {
+        "frontAxle": {
+          "maxSteering": 0.6,
+          "wheelDiameter": 0.7867,
+          "trackWidth": 1.6608,
+          "positionX": 1.5542,
+          "positionZ": 0.3934
+        },
+        "rearAxle": {
+          "maxSteering": 0.0,
+          "wheelDiameter": 0.7867,
+          "trackWidth": 1.6608,
+          "positionX": -1.4384,
+          "positionZ": 0.3934
+        }
+      },
+      "performance": {
+        "maxSpeed": 62.0,
+        "maxAcceleration": 4.5,
+        "maxDeceleration": 8.5
+      },
+      "mass": 2550
+    },
+    "meshCount": 39,
+    "triangleCount": 39175,
+    "animated": false,
+    "textureResolutions": [
+      ""
+    ],
+    "pbrMaterialWorkflow": "metallic",
+    "normalMapFormat": "OpenGL",
+    "modelCreationTool": "Blender"
+  },
+  "materialMappingUri": "../../persival_mapping_table.xomm"
+}

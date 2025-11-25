@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "fabric_cotton_dark",
+        "description": "Generic dark cotton.",
+        "uuid": "92a06a11-b70e-4c20-bbd5-c376f4e84177",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250604T000000Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

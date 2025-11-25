@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "polymer_pp_gray",
+        "description": "Generic gray polypropylene plastic",
+        "uuid": "a3770edb-31c6-4c0d-b1b4-b02c22e828f6",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250714T104111Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "look-up_tables/polymer_lambertian_50_pc_lidar_brdf.xompt"
+        ]
+    }
+}

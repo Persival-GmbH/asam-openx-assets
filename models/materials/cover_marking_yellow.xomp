@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "cover_marking_yellow",
+        "description": "Yellow road marking",
+        "uuid": "6b906784-0fb7-477f-8f7e-68f3623b3576",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250213T104241Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "look-up_tables/polymer_lambertian_80_pc_lidar_brdf.xompt"
+        ]
+    }
+}

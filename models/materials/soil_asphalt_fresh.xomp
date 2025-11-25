@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "name": "soil_asphalt_fresh",
+        "description": "Generic fresh asphalt",
+        "uuid": "671048a4-5db8-419f-a283-adfaa37fe795",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250213T104241Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "electromagneticPropertiesUri": "./look-up_tables/soil_asphalt_emp.xompt",
+        "brdfUris": [
+            "look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

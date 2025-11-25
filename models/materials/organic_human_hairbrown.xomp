@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "organic_human_hairbrown",
+        "description": "Brown human hair.",
+        "uuid": "64dfef95-ca00-4f8d-9864-fceef6789215",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250604T000000Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_20_pc_lidar_brdf.xompt"
+        ]
+    }
+}

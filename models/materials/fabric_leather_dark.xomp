@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "fabric_leather_dark",
+        "description": "Dark leather.",
+        "uuid": "61b371e6-9480-400e-a081-284d1cfca511",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250604T000000Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

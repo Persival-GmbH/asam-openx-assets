@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "name": "soild_asphalt",
+    "description": "Electromagnetic properties of Asphalt_58421130CI_19052022_1",
+    "uuid": "8d5a30fe-83cb-4e3c-b2e4-e571e6f6461b",
+    "materialVersion": "1.0.0",
+    "creationDate": "20240703T101728Z",
+    "openMaterial3dVersion": "1.0.0",
+    "copyrights": [
+      "(C) 2025 Persival GmbH",
+      "(C) 2023, Karlsruhe Institute of Technology",
+      "(C) 2023, Continental AG"
+    ],
+    "license": "MPL-2.0",
+    "authors": ["clemens.linnhoff@persival.de"],
+    "sources": "VIVALDI OpenMaterial Python Script"
+  },
+  "electromagneticProperties": [
+    [0.003893, 300.0, 50.0, 1.0, 0.0, -0.384, 2.22]
+  ]
+}
