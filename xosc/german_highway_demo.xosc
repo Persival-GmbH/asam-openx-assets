@@ -56,15 +56,6 @@
     <Storyboard>
         <Init>
             <Actions>
-                <GlobalAction>
-                    <EnvironmentAction>
-                        <Environment name="RainyWeather">
-                            <Weather>
-                                <Precipitation precipitationType="rain" intensity="0.0"/>
-                            </Weather>
-                        </Environment>
-                    </EnvironmentAction>
-                </GlobalAction>
                 <Private entityRef="Ego">
                     <PrivateAction>
                         <TeleportAction>
