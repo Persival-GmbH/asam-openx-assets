@@ -109,6 +109,7 @@
         ["Soil_Asphalt_RoadPatch4", "./materials/soil_asphalt_fresh.xomp", ""],
         ["Soil_Asphalt_RosyBrown", "./materials/soil_asphalt.xomp", ""],
         ["Soil_Asphalt_RubberizedFiller", "./materials/soil_asphalt.xomp", ""],
+        ["Soil_Dirt", "./materials/polymer_lambertian_10pc.xomp", ""],
         ["Stone_Concrete", "./materials/polymer_lambertian_50pc.xomp", ""],
         ["Stone_Concrete_Barrier", "./materials/polymer_lambertian_50pc.xomp", ""],
         ["Stone_Rock", "./materials/polymer_lambertian_50pc.xomp", ""],
