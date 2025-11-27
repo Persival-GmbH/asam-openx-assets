@@ -61,3 +61,8 @@ The following ASAM OpenMATERIAL 3D assets are included in this repository includ
 ## Usage
 
 To utilize all standardized data and assets in a simulation, check out our [demo repository](https://github.com/Persival-GmbH/standardized-co-simulation-demo).
+
+## Credits
+
+The vehicle models used in this repository were taken from public sources under the creative commons license and converted to the ASAM OpenMATERIAL 3D geometry format by https://github.com/bounverif/openx-assets.
+We enhanced the models and added a comprehensive material mapping. Each asset contains authorship and copyright information in the metadata.
