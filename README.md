@@ -7,9 +7,9 @@ This is a collection of data and assets demonstrating the connection between ASA
 - `xodr/`: Contains ASAM OpenDRIVE files defining road networks.
 - `xosc/`: Contains ASAM OpenSCENARIO XML files defining driving scenarios.
 - `models/`: Contains ASAM OpenMATERIAL 3D assets including material properties
-  - `environments, vehicles, etc/`: Subfolders for different types of 3D assets.
-  - `materials/`: Contains ASAM OpenMATERIAL 3D material property files and look-up tables.
-    ⚠️ Note: The material files are placeholders to demonstrate how the material system works. They are not actual measurement data.
+    - `environments, vehicles, etc/`: Subfolders for different types of 3D assets.
+    - `materials/`: Contains ASAM OpenMATERIAL 3D material property files and look-up tables.
+      ⚠️ Note: The material files are placeholders to demonstrate how the material system works. They are not actual measurement data.
 
 ## How OpenDRIVE, OpenSCENARIO XML, and OpenMATERIAL 3D Work Together
 
@@ -41,6 +41,22 @@ It provides 3D asset files (.xoma) with metadata and references to 3D geometry a
 - Paths to these assets must remain consistent and synchronized across distributed simulation components to maintain integrity.
 
 Check out this introduction to [ASAM OpenMATERIAL 3D](https://www.youtube.com/watch?v=0PagWTJB3Y8) or further detailed tutorials for [different aspects of ASAM OpenMATERIAL 3D](https://www.persival.de/knowledge/tags/asam-openmaterial-3d).
+
+The following ASAM OpenMATERIAL 3D assets are included in this repository including a comprehensive material mapping:
+
+#### Vehicles
+
+|                                                                                  |                                                                                        |                                                                                |
+|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| ![vehicle_audi_q7_2015.png](doc/images/vehicle_audi_q7_2015.png)                 | ![vehicle_audi_tt_2014_roadster.png](doc/images/vehicle_audi_tt_2014_roadster.png)     | ![vehicle_dacia_duster_2010.png](doc/images/vehicle_dacia_duster_2010.png)     |
+| ![vehicle_fiat_ducato_2014.png](doc/images/vehicle_fiat_ducato_2014.png)         | ![vehicle_gmc_hummer_2021_pickup.png](doc/images/vehicle_gmc_hummer_2021_pickup.png)   | ![vehicle_hyundai_tucson_2015.png](doc/images/vehicle_hyundai_tucson_2015.png) |
+| ![vehicle_mini_countryman_2016.png](doc/images/vehicle_mini_countryman_2016.png) | ![vehicle_volvo_v60_polestar_2013.png](doc/images/vehicle_volvo_v60_polestar_2013.png) |                                                                                |
+
+#### Environments
+
+|                                                                                          | | |
+|------------------------------------------------------------------------------------------|-|-|
+| ![environment_german_highway_short.png](doc/images/environment_german_highway_short.png) | | |
 
 ## Usage
 
