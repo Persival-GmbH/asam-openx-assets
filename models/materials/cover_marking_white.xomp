@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "cover_marking_white",
+        "description": "White road marking",
+        "uuid": "9385e1e1-ff0e-44fc-9ef0-6ac94731d494",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250213T104241Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "look-up_tables/ideal_retroreflector_lidar_brdf.xompt"
+        ]
+    }
+}

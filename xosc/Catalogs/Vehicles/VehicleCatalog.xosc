@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSCENARIO>
+    <FileHeader revMajor="1"
+                revMinor="3"
+                date="2025-11-24T10:00:00"
+                description="Vehicle catalog"
+                author="Persival GmbH"/>
+    <Catalog name="VehicleCatalog">
+        <Vehicle name="volvo_v60_polestar_2013" vehicleCategory="car" mass="1950" model3d="../models/vehicles/volvo_v60_polestar_2013/volvo_v60_polestar_2013.xoma">
+			<BoundingBox>
+				<Center x="1.4075" y="0.000" z="0.747"/>
+				<Dimensions length="4.674" width="2.085" height="1.494"/>
+			</BoundingBox>
+			<Performance maxSpeed="69.0" maxDeceleration="8.5" maxAcceleration="6.0"/>
+			<Axles>
+				<FrontAxle maxSteering="0.65" wheelDiameter="0.638" trackWidth="1.5817" positionX="2.7852" positionZ="0.319"/>
+				<RearAxle maxSteering="0.0" wheelDiameter="0.638" trackWidth="1.5817" positionX="0" positionZ="0.319"/>
+			</Axles>
+			<Properties>
+                <Property name="model_id" value="4"/>
+                <!-- Scale modes: None, BBToModel, ModelToBB -->
+                <Property name="scaleMode" value="ModelToBB"/>
+            </Properties>
+		</Vehicle>
+		<Vehicle name="dacia_duster_2010" vehicleCategory="car" mass="1400" model3d="../models/vehicles/dacia_duster_2010/dacia_duster_2010.xoma">
+			<BoundingBox>
+				<Center x="1.3424" y="0.000" z="0.841"/>
+				<Dimensions length="4.322" width="2.002" height="1.682"/>
+			</BoundingBox>
+			<Performance maxSpeed="47.0" maxDeceleration="7.5" maxAcceleration="3.0"/>
+			<Axles>
+				<FrontAxle maxSteering="0.6" wheelDiameter="0.6778" trackWidth="1.5577" positionX="2.6751" positionZ="0.3389"/>
+				<RearAxle maxSteering="0.0" wheelDiameter="0.6778" trackWidth="1.5577" positionX="0" positionZ="0.3389"/>
+			</Axles>
+			<Properties>
+                <Property name="model_id" value="5"/>
+                <!-- Scale modes: None, BBToModel, ModelToBB -->
+                <Property name="scaleMode" value="ModelToBB"/>
+            </Properties>
+		</Vehicle>
+		<Vehicle name="fiat_ducato_2014" vehicleCategory="car" mass="1950" model3d="../models/vehicles/fiat_ducato_2014/fiat_ducato_2014.xoma">
+			<BoundingBox>
+				<Center x="1.4604" y="0.000" z="1.123"/>
+				<Dimensions length="4.999" width="2.508" height="2.245"/>
+			</BoundingBox>
+			<Performance maxSpeed="44.0" maxDeceleration="7.0" maxAcceleration="2.5"/>
+			<Axles>
+				<FrontAxle maxSteering="0.55" wheelDiameter="0.7009" trackWidth="1.7962" positionX="3.0025" positionZ="0.3504"/>
+				<RearAxle maxSteering="0.0" wheelDiameter="0.7009" trackWidth="1.7962" positionX="0" positionZ="0.3504"/>
+			</Axles>
+			<Properties>
+                <Property name="model_id" value="6"/>
+                <!-- Scale modes: None, BBToModel, ModelToBB -->
+                <Property name="scaleMode" value="ModelToBB"/>
+            </Properties>
+		</Vehicle>
+		<Vehicle name="audi_tt_2014_roadster" vehicleCategory="car" mass="1550" model3d="../models/vehicles/audi_tt_2014_roadster/audi_tt_2014_roadster.xoma">
+			<BoundingBox>
+				<Center x="1.3025" y="0.000" z="0.664"/>
+				<Dimensions length="4.178" width="1.983" height="1.328"/>
+			</BoundingBox>
+			<Performance maxSpeed="69.0" maxDeceleration="9.0" maxAcceleration="6.0"/>
+			<Axles>
+				<FrontAxle maxSteering="0.7" wheelDiameter="0.6597" trackWidth="1.578" positionX="2.5078" positionZ="0.3299"/>
+				<RearAxle maxSteering="0.0" wheelDiameter="0.6597" trackWidth="1.578" positionX="0" positionZ="0.3299"/>
+			</Axles>
+			<Properties>
+                <Property name="model_id" value="8"/>
+                <!-- Scale modes: None, BBToModel, ModelToBB -->
+                <Property name="scaleMode" value="ModelToBB"/>
+            </Properties>
+		</Vehicle>
+		<Vehicle name="gmc_hummer_2021_pickup" vehicleCategory="truck" mass="4500" model3d="../models/vehicles/gmc_hummer_2021_pickup/gmc_hummer_2021_pickup.xoma">
+			<BoundingBox>
+				<Center x="1.5793" y="0.000" z="0.970"/>
+				<Dimensions length="5.519" width="2.394" height="1.940"/>
+			</BoundingBox>
+			<Performance maxSpeed="58.0" maxDeceleration="8.0" maxAcceleration="6.0"/>
+			<Axles>
+				<FrontAxle maxSteering="0.55" wheelDiameter="0.8734" trackWidth="1.87" positionX="3.4477" positionZ="0.4367"/>
+				<RearAxle maxSteering="0.175" wheelDiameter="0.8734" trackWidth="1.87" positionX="0" positionZ="0.4367"/>
+			</Axles>
+			<Properties>
+                <Property name="model_id" value="10"/>
+                <!-- Scale modes: None, BBToModel, ModelToBB -->
+                <Property name="scaleMode" value="ModelToBB"/>
+            </Properties>
+		</Vehicle>
+		<Vehicle name="hyundai_tucson_2015" vehicleCategory="car" mass="1650" model3d="../models/vehicles/hyundai_tucson_2015/hyundai_tucson_2015.xoma">
+			<BoundingBox>
+				<Center x="1.3888" y="0.000" z="0.830"/>
+				<Dimensions length="4.532" width="2.080" height="1.661"/>
+			</BoundingBox>
+			<Performance maxSpeed="50.0" maxDeceleration="8.0" maxAcceleration="3.5"/>
+			<Axles>
+				<FrontAxle maxSteering="0.6" wheelDiameter="0.7143" trackWidth="1.5428" positionX="2.6734" positionZ="0.3571"/>
+				<RearAxle maxSteering="0.0" wheelDiameter="0.7143" trackWidth="1.5428" positionX="0" positionZ="0.3571"/>
+			</Axles>
+			<Properties>
+                <Property name="model_id" value="11"/>
+                <!-- Scale modes: None, BBToModel, ModelToBB -->
+                <Property name="scaleMode" value="ModelToBB"/>
+            </Properties>
+		</Vehicle>
+		<Vehicle name="audi_q7_2015" vehicleCategory="car" mass="2550" model3d="../models/vehicles/audi_q7_2015/audi_q7_2015.xoma">
+			<BoundingBox>
+				<Center x="1.4384" y="0.000" z="0.874"/>
+				<Dimensions length="5.038" width="2.331" height="1.748"/>
+			</BoundingBox>
+			<Performance maxSpeed="62.0" maxDeceleration="8.5" maxAcceleration="4.5"/>
+			<Axles>
+				<FrontAxle maxSteering="0.6" wheelDiameter="0.7867" trackWidth="1.6608" positionX="2.9926" positionZ="0.3934"/>
+				<RearAxle maxSteering="0.0" wheelDiameter="0.7867" trackWidth="1.6608" positionX="0" positionZ="0.3934"/>
+			</Axles><Properties>
+                <Property name="model_id" value="14"/>
+                <!-- Scale modes: None, BBToModel, ModelToBB -->
+                <Property name="scaleMode" value="ModelToBB"/>
+            </Properties>
+		</Vehicle>
+		<Vehicle name="mini_countryman_2016" vehicleCategory="car" mass="1500" model3d="../models/vehicles/mini_countryman_2016/mini_countryman_2016.xoma">
+			<BoundingBox>
+				<Center x="1.3492" y="0.000" z="0.794"/>
+				<Dimensions length="4.308" width="1.975" height="1.587"/>
+			</BoundingBox>
+			<Performance maxSpeed="55.0" maxDeceleration="8.0" maxAcceleration="4.0"/>
+			<Axles>
+				<FrontAxle maxSteering="0.65" wheelDiameter="0.6829" trackWidth="1.515" positionX="2.6758" positionZ="0.3415"/>
+				<RearAxle maxSteering="0.0" wheelDiameter="0.6829" trackWidth="1.515" positionX="0" positionZ="0.3415"/>
+			</Axles>
+			<Properties>
+                <Property name="model_id" value="15"/>
+                <!-- Scale modes: None, BBToModel, ModelToBB -->
+                <Property name="scaleMode" value="ModelToBB"/>
+            </Properties>
+		</Vehicle>
+    </Catalog>
+</OpenSCENARIO>

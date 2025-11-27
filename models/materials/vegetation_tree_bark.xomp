@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "vegetation_tree_bark",
+        "description": "Brown bark of a generic tree",
+        "uuid": "b432e854-01ff-4179-8243-694d8b2e9958",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250213T104446Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

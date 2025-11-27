@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "name": "metal_steel_-_cover_paint_cyan",
+        "description": "Generic steel with cyan paint.",
+        "uuid": "864f14cc-ec88-43ca-b7cc-18a19102d69e",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250109T145822Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "electromagneticPropertiesUri": "./look-up_tables/metal_steel_emp.xompt",
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

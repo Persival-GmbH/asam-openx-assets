@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "fabric_denim_blue",
+        "description": "Blue denim.",
+        "uuid": "0093a7d3-bf9c-4103-9e81-280b1d66ce2d",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250604T000000Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_20_pc_lidar_brdf.xompt"
+        ]
+    }
+}

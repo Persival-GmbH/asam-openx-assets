@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "polymer_retroreflective_blue",
+        "description": "Blue retro reflector.",
+        "uuid": "1c8eb4cb-1e4c-4a43-a5a9-79e6f7f41a5f",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250109T150409Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/ideal_retroreflector_lidar_brdf.xompt"
+        ]
+    }
+}

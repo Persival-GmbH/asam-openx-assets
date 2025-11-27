@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "name": "metal_steel_emp",
+    "description": "Electromagnetic properties of steel",
+    "uuid": "a34855c8-a6bf-4af8-903a-076901d4a05a",
+    "materialVersion": "1.0.0",
+    "creationDate": "20240703T101728Z",
+    "openMaterial3dVersion": "1.0.0",
+    "copyrights": ["(C) 2025, Persival GmbH"],
+    "license": "MPL-2.0",
+    "authors": ["clemens.linnhoff@persival.de"],
+    "sources": "estimate, https://refractiveindex.info/?shelf=main&book=Al&page=Hagemann"
+  },
+  "electromagneticProperties": [
+    [0.001, 300.0, 50.0, 1.0, 0.0, -80839, 1.9460e+6],
+    [0.003893, 300.0, 50.0, 1.0, 0.0, -2.26e+5, 7.67e+6]
+  ]
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Config>
+
+    <Param name="InputFile" value="3d-assets/models/vehicles/truck_example/truck_example.xoma" />
+
+    <CheckerBundle application="xomBundle">
+        <Param name="resultFile" value="xom_bundle_report.xqar" />
+        <Checker checkerId="check_asam.net:xom:1.0.0:general.valid_json_document" maxLevel="1" minLevel="3" />
+        <Checker checkerId="check_asam.net:xom:1.0.0:general.version_is_defined" maxLevel="1" minLevel="3" />
+        <Checker checkerId="check_asam.net:xom:1.0.0:general.valid_schema" maxLevel="1" minLevel="3" />
+    </CheckerBundle>
+
+    <ReportModule application="TextReport">
+        <Param name="strInputFile" value="Result.xqar" />
+        <Param name="strReportFile" value="Report.txt" />
+    </ReportModule>
+
+</Config>

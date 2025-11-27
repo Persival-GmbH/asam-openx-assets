@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "fabric_synthetic_gray",
+        "description": "Gray synthetic fabric.",
+        "uuid": "b7703b57-3df9-4f7f-a0f4-e3b0303efdc0",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250604T000000Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

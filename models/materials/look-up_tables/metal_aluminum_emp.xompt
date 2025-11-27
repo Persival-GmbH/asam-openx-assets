@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "name": "metal_aluminum_emp",
+    "description": "Electromagnetic properties of aluminum",
+    "uuid": "bea5a5f2-66e7-4b93-8a8c-d773992dc09c",
+    "materialVersion": "1.0.0",
+    "creationDate": "20240703T101728Z",
+    "openMaterial3dVersion": "1.0.0",
+    "copyrights": ["(C) 2025, Persival GmbH"],
+    "license": "MPL-2.0",
+    "authors": ["clemens.linnhoff@persival.de"],
+    "sources": "estimate, https://refractiveindex.info/?shelf=main&book=Al&page=Hagemann"
+  },
+  "electromagneticProperties": [
+    [0.001, 300.0, 50.0, 1.0, 0.0, -80839, 1.9460e+6],
+    [0.003893, 300.0, 50.0, 1.0, 0.0, -2.26e+5, 7.67e+6]
+  ]
+}

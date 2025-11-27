@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "name": "metal_steel_-_cover_paint_yellow",
+        "description": "Generic steel with yellow paint.",
+        "uuid": "f8d575b5-d271-49f1-b97d-6b7041a19ad5",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250109T145822Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "electromagneticPropertiesUri": "./look-up_tables/metal_steel_emp.xompt",
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_50_pc_lidar_brdf.xompt"
+        ]
+    }
+}

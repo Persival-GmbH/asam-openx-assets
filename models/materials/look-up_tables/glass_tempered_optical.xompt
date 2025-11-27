@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "name": "glass_tempered",
+        "description": "Index of refraction and extinction coefficient of tempered glass",
+        "uuid": "445202d1-64f2-4b4f-b11a-f715a2314faa",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250109T150409Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"],
+        "sources": "https://refractiveindex.info"
+    },
+    "opticalProperties":[
+        [8.50e-07, 297, 1.51, 0.0],
+        [9.05e-07, 297, 1.51, 0.0],
+        [1.55e-06, 297, 1.50, 0.0]
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "name": "metal_steel_-_cover_paint_red",
+        "description": "Generic steel with red paint.",
+        "uuid": "aaf85683-ec87-4cb9-9d2f-3959c0d2fd56",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250109T145822Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "electromagneticPropertiesUri": "./look-up_tables/metal_steel_emp.xompt",
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_50_pc_lidar_brdf.xompt"
+        ]
+    }
+}

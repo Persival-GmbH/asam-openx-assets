@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "vegetation_lawn",
+        "description": "Generic green grass",
+        "uuid": "c26ed9ea-8510-4334-91eb-8d40bd594878",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250213T104319Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

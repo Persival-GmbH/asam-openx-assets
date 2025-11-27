@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "polymer_pp_white",
+        "description": "Generic white polypropylene plastic",
+        "uuid": "d16dff9d-2acd-4f4e-92c8-992a6c34e43a",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250213T104203Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "look-up_tables/polymer_lambertian_80_pc_lidar_brdf.xompt"
+        ]
+    }
+}

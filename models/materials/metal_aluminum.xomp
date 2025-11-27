@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "name": "metal_aluminum",
+        "description": "Generic aluminum.",
+        "uuid": "cf33007d-848a-4fa7-9a38-0bcc56110dd3",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250714T145822Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "electromagneticPropertiesUri": "./look-up_tables/metal_aluminum_emp.xompt",
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_50_pc_lidar_brdf.xompt"
+        ]
+    }
+}

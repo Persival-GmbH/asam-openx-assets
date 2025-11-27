@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "polymer_rubber_black",
+        "description": "Generic black rubber.",
+        "uuid": "b39502b2-29e8-4c07-a5b4-3bc3bd811230",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250109T150409Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

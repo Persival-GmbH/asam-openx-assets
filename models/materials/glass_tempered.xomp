@@ -1,0 +1,16 @@
+{
+    "metadata": {
+        "name": "glass_tempered",
+        "description": "Generic tempered glass.",
+        "uuid": "96081cc0-d73f-4872-add2-91b6a3076e1d",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250109T150409Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "opticalPropertiesUri": "./look-up_tables/glass_tempered_optical.xompt"
+    }
+}

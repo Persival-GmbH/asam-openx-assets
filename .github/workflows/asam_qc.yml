@@ -1,0 +1,150 @@
+
+name: ASAM QC OpenDRIVE/OpenSCENARIO XML/OpenMATERIAL 3D
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build_qc_framework:
+    name: Build ASAM QC Framework
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cache QC Framework
+        id: cache-qc-framework
+        uses: actions/cache@v4
+        with:
+          path: qc-build
+          key: ${{ runner.os }}-qc-build
+
+      - name: Install dependencies
+        run: sudo apt install -y g++ g++-10 make build-essential cmake libgtest-dev qtbase5-dev libqt5xmlpatterns5-dev libxerces-c-dev pkg-config python3-venv git
+
+      - name: Get QC Framework
+        if: steps.cache-qc-framework.outputs.cache-hit != 'true'
+        run: git clone https://github.com/asam-ev/qc-framework.git
+
+      - name: Build QC Framework
+        if: steps.cache-qc-framework.outputs.cache-hit != 'true'
+        working-directory: qc-framework
+        run: |
+          mkdir build
+          cmake -G "Unix Makefiles" -B./build -S . \
+            -DCMAKE_INSTALL_PREFIX="../qc-build" \
+            -DENABLE_FUNCTIONAL_TESTS=ON  -DXERCES_ROOT="/usr" \
+            -DQt5_DIR="/usr/lib/x86_64-linux-gnu/cmake/Qt5/" \
+            -DQt5XmlPatterns_DIR="/usr/lib/x86_64-linux-gnu/cmake/Qt5XmlPatterns/"
+          cmake --build ./build --target install --config Release -j4
+          cmake --install ./build
+
+  build_qc_openmaterial_3d:
+    name: Build ASAM QC OpenMATERIAL 3D
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cache QC OpenMATERIAL 3D
+        id: cache-qc-xom
+        uses: actions/cache@v4
+        with:
+          path: qc-openmaterial-3d
+          key: ${{ runner.os }}-qc-xom
+
+      - name: Install dependencies
+        run: sudo apt install -y g++ g++-10 make build-essential cmake libgtest-dev qtbase5-dev libqt5xmlpatterns5-dev libxerces-c-dev pkg-config python3-venv git
+
+      - name: Get QC OpenMATERIAL 3D
+        if: steps.cache-qc-xom.outputs.cache-hit != 'true'
+        run: git clone --depth 1 https://github.com/asam-ev/qc-openmaterial-3d.git
+
+      - name: Build QC OpenMATERIAL 3D
+        if: steps.cache-qc-xom.outputs.cache-hit != 'true'
+        working-directory: qc-openmaterial-3d
+        run: |
+          python3 -m venv .venv
+          source .venv/bin/activate
+          pip install .
+
+
+  asam_qc_opendrive_openscenarioxml:
+    runs-on: ubuntu-latest
+    needs: build_qc_framework
+    env:
+      CI_COMMIT_REF_NAME: ${{ github.head_ref }}
+      CI_MERGE_REQUEST_DIFF_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for diff
+      - name: Cache QC Framework
+        id: cache-qc-framework
+        uses: actions/cache@v4
+        with:
+          path: qc-build
+          key: ${{ runner.os }}-qc-build
+      - name: Install dependencies
+        run: sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
+      - name: Find changed files
+        id: changed-files
+        run: |
+          CHANGED_FILES=$(git diff --name-status $CI_MERGE_REQUEST_DIFF_BASE_SHA -- '*.xodr' '*.xosc' | awk '$1 != "D" {print $2}' | tr '\n' ' ')
+          echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+      - name: Run QC tests
+        if: steps.changed-files.outputs.changed_files != ''
+        run: |
+          for FILE in ${{ steps.changed-files.outputs.changed_files }}; do
+            echo "Running tests for $FILE"
+            docker run \
+              -e INPUT_FILENAME=$FILE \
+              -v $(pwd):/input_directory \
+              -v $(pwd):/out \
+              -e USER_ID=$(id -u) \
+              -e GROUP_ID=$(id -g) \
+              --rm --name demo_pipeline ghcr.io/asam-ev/qc-framework:demo-pipeline-latest
+            ./qc-build/bin/GithubCIReport qc-result-$FILE/Result.xqar
+          done
+
+  asam_qc_openmaterial_3d:
+    runs-on: ubuntu-latest
+    needs:
+      - build_qc_framework
+      - build_qc_openmaterial_3d
+    env:
+      CI_COMMIT_REF_NAME: ${{ github.head_ref }}
+      CI_MERGE_REQUEST_DIFF_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for diff
+      - name: Cache QC Framework
+        id: cache-qc-framework
+        uses: actions/cache@v4
+        with:
+          path: qc-build
+          key: ${{ runner.os }}-qc-build
+      - name: Cache QC OpenMATERIAL 3D
+        id: cache-qc-xom
+        uses: actions/cache@v4
+        with:
+          path: qc-openmaterial-3d
+          key: ${{ runner.os }}-qc-xom
+      - name: Install dependencies
+        run: sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
+      - name: Find changed files
+        id: changed-files
+        run: |
+          CHANGED_FILES=$(git diff --name-status $CI_MERGE_REQUEST_DIFF_BASE_SHA -- '*.xoma' '*.xomm' '*.xomp' '*.xompt' | awk '$1 != "D" {print $2}' | tr '\n' ' ')
+          echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+      - name: Run QC tests
+        if: steps.changed-files.outputs.changed_files != ''
+        run: |
+          source qc-openmaterial-3d/.venv/bin/activate
+          for FILE in ${{ steps.changed-files.outputs.changed_files }}; do
+            echo "Running tests for $FILE"
+            python3 ./.github/workflows/generate_config.py ./.github/workflows/qc_openmaterial3d_config.xml $FILE
+            python3 ./qc-openmaterial-3d/qc_openmaterial3d/main.py --config_path ./.github/workflows/qc_openmaterial3d_config.xml
+            ./qc-build/bin/GithubCIReport xom_bundle_report.xqar
+          done

@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "glass_mirror",
+        "description": "Generic mirror glass.",
+        "uuid": "61186431-cc93-4a6f-b9ee-6ed26c4b7f91",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250331T150409Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/ideal_specular_lidar_brdf.xompt"
+        ]
+    }
+}

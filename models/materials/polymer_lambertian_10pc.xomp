@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "10_percent_calibration_target_lidar_material",
+        "description": "Material properties of 10 percent calibration-target for lidar sensor.",
+        "uuid": "0bdebbd0-70bb-4213-ad90-36e0e15bf2de",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250109T145239Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_10_pc_lidar_brdf.xompt"
+        ]
+    }
+}

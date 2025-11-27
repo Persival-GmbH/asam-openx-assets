@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "name": "organic_human_skin",
+        "description": "Generic human skin.",
+        "uuid": "3d5fbb4d-da6c-4c80-8a3e-d7faf853dbeb",
+        "materialVersion": "1.0.0",
+        "creationDate": "20250604T000000Z",
+        "openMaterial3dVersion": "1.0.0",
+        "copyrights": ["(C) 2025, Persival GmbH"],
+        "license": "MPL-2.0",
+        "authors": ["Persival GmbH"]
+    },
+    "materialProperties": {
+        "brdfUris": [
+            "./look-up_tables/polymer_lambertian_50_pc_lidar_brdf.xompt"
+        ]
+    }
+}
