@@ -20,7 +20,9 @@ jobs:
           key: ${{ runner.os }}-qc-build
 
       - name: Install dependencies
-        run: sudo apt install -y g++ g++-10 make build-essential cmake libgtest-dev qtbase5-dev libqt5xmlpatterns5-dev libxerces-c-dev pkg-config python3-venv git
+        run: |
+          sudo apt-get update
+          sudo apt install -y g++ g++-10 make build-essential cmake libgtest-dev qtbase5-dev libqt5xmlpatterns5-dev libxerces-c-dev pkg-config python3-venv git
 
       - name: Get QC Framework
         if: steps.cache-qc-framework.outputs.cache-hit != 'true'
@@ -52,7 +54,9 @@ jobs:
           key: ${{ runner.os }}-qc-xom
 
       - name: Install dependencies
-        run: sudo apt install -y g++ g++-10 make build-essential cmake libgtest-dev qtbase5-dev libqt5xmlpatterns5-dev libxerces-c-dev pkg-config python3-venv git
+        run: |
+          sudo apt-get update
+          sudo apt install -y g++ g++-10 make build-essential cmake libgtest-dev qtbase5-dev libqt5xmlpatterns5-dev libxerces-c-dev pkg-config python3-venv git
 
       - name: Get QC OpenMATERIAL 3D
         if: steps.cache-qc-xom.outputs.cache-hit != 'true'
@@ -85,7 +89,9 @@ jobs:
           path: qc-build
           key: ${{ runner.os }}-qc-build
       - name: Install dependencies
-        run: sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
+        run: |
+          sudo apt-get update
+          sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
       - name: Find changed files
         id: changed-files
         run: |
@@ -132,7 +138,9 @@ jobs:
           path: qc-openmaterial-3d
           key: ${{ runner.os }}-qc-xom
       - name: Install dependencies
-        run: sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
+        run: |
+          sudo apt-get update
+          sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
       - name: Find changed files
         id: changed-files
         run: |
