@@ -6,7 +6,7 @@
         "mappingVersion": "1.0.0",
         "openMaterial3dVersion": "1.0.0",
         "copyrights": ["(C) 2025 Persival GmbH"],
-        "license": "MPL-2.0",
+        "license": "Proprietary",
         "authors": ["clemens.linnhoff@persival.de"],
         "creationDate": "20250331T180000Z"
     },
@@ -51,6 +51,7 @@
         ["Metal_Steel_-_Cover_Paint_Green", "./materials/metal_steel_-_cover_paint_green.xomp", ""],
         ["Metal_Steel_-_Cover_Paint_LightBlue", "./materials/metal_steel_-_cover_paint_blue.xomp", ""],
         ["Metal_Steel_-_Cover_Paint_Orange", "./materials/metal_steel_-_cover_paint_orange.xomp", ""],
+        ["Metal_Steel_-_Cover_Paint_Pink", "./materials/metal_steel_-_cover_paint_pink.xomp", ""],
         ["Metal_Steel_-_Cover_Paint_Red", "./materials/metal_steel_-_cover_paint_red.xomp", ""],
         ["Metal_Steel_-_Cover_Paint_White", "./materials/metal_steel_-_cover_paint_white.xomp", ""],
         ["Metal_Steel_-_Cover_Paint_Yellow", "./materials/metal_steel_-_cover_paint_yellow.xomp", ""],
