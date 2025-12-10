@@ -6,7 +6,7 @@
         "mappingVersion": "1.0.0",
         "openMaterial3dVersion": "1.0.0",
         "copyrights": ["(C) 2025 Persival GmbH"],
-        "license": "Proprietary",
+        "license": "MPL-2.0",
         "authors": ["clemens.linnhoff@persival.de"],
         "creationDate": "20250331T180000Z"
     },

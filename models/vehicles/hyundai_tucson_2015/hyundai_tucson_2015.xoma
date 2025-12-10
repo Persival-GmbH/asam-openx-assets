@@ -36,14 +36,14 @@
       "axles": {
         "frontAxle": {
           "maxSteering": 0.6,
-          "wheelDiameter": 0.714,
+          "wheelDiameter": 0.7143,
           "trackWidth": 1.5428,
           "positionX": 1.2846,
           "positionZ": 0.3571
         },
         "rearAxle": {
           "maxSteering": 0.0,
-          "wheelDiameter": 0.714,
+          "wheelDiameter": 0.7143,
           "trackWidth": 1.5428,
           "positionX": -1.3888,
           "positionZ": 0.3571
