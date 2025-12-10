@@ -89,7 +89,9 @@ jobs:
           path: qc-build
           key: ${{ runner.os }}-qc-build
       - name: Install dependencies
-        run: sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
+        run: |
+          sudo apt-get update
+          sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
       - name: Find changed files
         id: changed-files
         run: |
@@ -136,7 +138,9 @@ jobs:
           path: qc-openmaterial-3d
           key: ${{ runner.os }}-qc-xom
       - name: Install dependencies
-        run: sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
+        run: |
+          sudo apt-get update
+          sudo apt install -y libxerces-c-dev qtbase5-dev libqt5xmlpatterns5-dev
       - name: Find changed files
         id: changed-files
         run: |
