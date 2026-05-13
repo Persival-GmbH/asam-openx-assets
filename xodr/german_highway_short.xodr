@@ -124,6 +124,26 @@
                 </right>
             </laneSection>
         </lanes>
+        <objects>
+            <object id="1" s="0" t="14.278" name="guardRail" type="barrier" subtype="guardRail" dynamic="no" zOffset="0.362" pitch="0" roll="0" height="0.3" orientation="none" hdg="3.141592653589793">
+                <repeat length="924.0198191130992" distance="0" s="0" tStart="14.278" tEnd="14.278" heightStart="0.3" heightEnd="0.3" zOffsetStart="0.362" zOffsetEnd="0.362"/>
+            </object>
+            <object id="2" s="0" t="-14.278" name="guardRail" type="barrier" subtype="guardRail" dynamic="no" zOffset="0.362" pitch="0" roll="0" height="0.3" orientation="none" hdg="3.141592653589793">
+                <repeat length="924.0198191130992" distance="0" s="0" tStart="-14.278" tEnd="-14.278" heightStart="0.3" heightEnd="0.3" zOffsetStart="0.362" zOffsetEnd="0.362"/>
+            </object>
+            <object id="3" s="0" t="1.823" name="jerseyBarrier" type="barrier" subtype="jerseyBarrier" dynamic="no" zOffset="0.0" pitch="0" roll="0" height="0.96" orientation="none" hdg="0">
+                <repeat length="924.0198191130992" distance="0" s="0" tStart="1.823" tEnd="1.823" heightStart="0.96" heightEnd="0.96" zOffsetStart="0.0" zOffsetEnd="0.0"/>
+            </object>
+            <object id="4" s="0" t="-1.823" name="jerseyBarrier" type="barrier" subtype="jerseyBarrier" dynamic="no" zOffset="0.0" pitch="0" roll="0" height="0.96" orientation="none" hdg="0">
+                <repeat length="924.0198191130992" distance="0" s="0" tStart="-1.823" tEnd="-1.823" heightStart="0.96" heightEnd="0.96" zOffsetStart="0.0" zOffsetEnd="0.0"/>
+            </object>
+            <object id="5" s="220" t="14.553" name="Guardrail_Post" type="pole" subtype="permanentDelineator" dynamic="no" zOffset="0.0" pitch="0" roll="0" height="0.7" radius="0.074" orientation="none" hdg="3.141592653589793">
+                <repeat length="922.035819113" distance="2.0" s="0" tStart="14.553" tEnd="14.553" heightStart="0.7" heightEnd="0.7" zOffsetStart="0.0" zOffsetEnd="0.0"/>
+            </object>
+            <object id="6" s="0.0" t="-14.553" name="Guardrail_Post" type="pole" subtype="permanentDelineator" dynamic="no" zOffset="0.0" pitch="0" roll="0" height="0.7" radius="0.074" orientation="none" hdg="3.141592653589793">
+                <repeat length="924.005819113" distance="2.0" s="0" tStart="-14.553" tEnd="-14.553" heightStart="0.7" heightEnd="0.7" zOffsetStart="0.0" zOffsetEnd="0.0"/>
+            </object>
+        </objects>
     </road>
     <road rule="RHT" id="46" junction="-1" length="467.681257974739">
         <link>
@@ -263,5 +283,25 @@
                 </right>
             </laneSection>
         </lanes>
+        <objects>
+            <object id="7" s="0" t="14.278" name="guardRail" type="barrier" subtype="guardRail" dynamic="no" zOffset="0.362" pitch="0" roll="0" height="0.3" orientation="none" hdg="3.141592653589793">
+                <repeat length="467.653257975" distance="0" s="0" tStart="14.278" tEnd="14.278" heightStart="0.3" heightEnd="0.3" zOffsetStart="0.362" zOffsetEnd="0.362"/>
+            </object>
+            <object id="8" s="0" t="-14.278" name="guardRail" type="barrier" subtype="guardRail" dynamic="no" zOffset="0.362" pitch="0" roll="0" height="0.3" orientation="none" hdg="3.141592653589793">
+                <repeat length="467.653257975" distance="0" s="0" tStart="-14.278" tEnd="-14.278" heightStart="0.3" heightEnd="0.3" zOffsetStart="0.362" zOffsetEnd="0.362"/>
+            </object>
+            <object id="9" s="0" t="1.823" name="jerseyBarrier" type="barrier" subtype="jerseyBarrier" dynamic="no" zOffset="0.0" pitch="0" roll="0" height="0.96" orientation="none" hdg="0">
+                <repeat length="467.653257975" distance="0" s="0" tStart="1.823" tEnd="1.823" heightStart="0.96" heightEnd="0.96" zOffsetStart="0.0" zOffsetEnd="0.0"/>
+            </object>
+            <object id="10" s="0" t="-1.823" name="jerseyBarrier" type="barrier" subtype="jerseyBarrier" dynamic="no" zOffset="0.0" pitch="0" roll="0" height="0.96" orientation="none" hdg="0">
+                <repeat length="467.653257975" distance="0" s="0" tStart="-1.823" tEnd="-1.823" heightStart="0.96" heightEnd="0.96" zOffsetStart="0.0" zOffsetEnd="0.0"/>
+            </object>
+            <object id="11" s="2.0" t="14.553" name="Guardrail_Post" type="pole" subtype="permanentDelineator" dynamic="no" zOffset="0.0" pitch="0" roll="0" height="0.7" radius="0.074" orientation="none" hdg="3.141592653589793">
+                <repeat length="465.713257975" distance="1.999" s="0" tStart="14.553" tEnd="14.553" heightStart="0.7" heightEnd="0.7" zOffsetStart="0.0" zOffsetEnd="0.0"/>
+            </object>
+            <object id="12" s="0.0" t="-14.553" name="Guardrail_Post" type="pole" subtype="permanentDelineator" dynamic="no" zOffset="0.0" pitch="0" roll="0" height="0.7" radius="0.074" orientation="none" hdg="3.141592653589793">
+                <repeat length="467.653257975" distance="1.999" s="0" tStart="-14.553" tEnd="-14.553" heightStart="0.7" heightEnd="0.7" zOffsetStart="0.0" zOffsetEnd="0.0"/>
+            </object>
+        </objects>
     </road>
 </OpenDRIVE>
